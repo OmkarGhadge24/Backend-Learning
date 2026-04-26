@@ -12,5 +12,6 @@ router.post('/upload', authMiddleware.authArtist, upload.single("music"), musicC
 router.post('/album', authMiddleware.authArtist, musicController.createAlbum)
 router.get('/', authMiddleware.authUser, musicController.getAllMusics)
 router.get('/album', authMiddleware.authUser, musicController.getAllAlbums)
+router.get('/album/:albumId', authMiddleware.authUser, musicController.getAlbumById)
 
 module.exports = router
