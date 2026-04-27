@@ -7,6 +7,6 @@ describe('GET /', () => {
 
     expect(response.status).toBe(200)
     expect(response.body).toHaveProperty('message')
-    expect(typeof response.body.message).toBe('string')
+    expect(response.body.message).toBe('Hello, World!')
   })
 })
